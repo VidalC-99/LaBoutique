@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page introuvable{% endblock %}
+
+{% block content %}
+    <div class="small-block">
+       <h2>Page introuvable</h2>
+        
+        <p>Cette page ne semble pas exister</p>
+        <a href="{{ path('home') }}"> revenir à l'acceuil</a>
+    </div>
+{% endblock %}
