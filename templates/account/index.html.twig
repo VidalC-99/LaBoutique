@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AccountController!{% endblock %}
+
+{% block content %}
+    <h1>Mon compte</h1>
+    {% if is_granted("ROLE_ADMIN") %}
+         <a href="/admin" > Accéder au compte admin</a> <br>
+    {% endif %}
+    <p>Bienvenu {{ app.user.firstname }} dans votre compte. <br>
+    Ici, vous pourrez gerez vos informations personnelles.
+    <hr>
+
+
+    </p>
+
+    <div class="row ">
+        <div class="col-md-4">
+            <div class="account-item text-center"style="background-color: #f1f2f6;
+    padding: 70px;text-transform: uppercase;
+    font-size: 13px;
+    color: #4b6584;
+    font-weight: bold;">
+                <a href="{{ path('app_account_password') }}"> le mot de passe</a> <br>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="account-item text-center" style="background-color: #f1f2f6;
+    padding: 70px;text-transform: uppercase;
+    font-size: 13px;
+    color: #4b6584;
+    font-weight: bold;" >
+                <a href="{{ path('app_account_address') }}"> Ajouter mes adresses</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="account-item text-center" style="background-color: #f1f2f6;
+    padding: 70px;text-transform: uppercase;
+    font-size: 13px;
+    color: #4b6584;
+    font-weight: bold;" >
+                <a href="{{ path('app_account_order') }}">Mes commandes</a>
+            </div>
+        </div>
+    </div>
+    <hr>
+{% endblock %}
