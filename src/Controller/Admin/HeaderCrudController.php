@@ -29,8 +29,7 @@ class HeaderCrudController extends AbstractCrudController
                 ->setUploadDir('public/upload/images/Header')
                 ->setUploadedFileNamePattern('[randomhash].[extension]')
                 ->setRequired(false),
-
         ];
     }
 
-}
+}   
